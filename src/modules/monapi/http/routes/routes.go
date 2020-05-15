@@ -35,7 +35,7 @@ func Config(r *gin.Engine) {
 		nolog.GET("/stras", strasAll)
 	}
 
-	login := r.Group("/api/portal").Use(middleware.Logined())
+	login := r.Group("/api/portal")
 	{
 		login.GET("/self/profile", selfProfileGet)
 		login.PUT("/self/profile", selfProfilePut)
@@ -124,7 +124,7 @@ func Config(r *gin.Engine) {
 		login.GET("/stra/:sid", straGet)
 	}
 
-	v1 := r.Group("/v1/portal").Use(middleware.CheckHeaderToken())
+	v1 := r.Group("/v1/portal")
 	{
 		v1.POST("/endpoint", endpointImport)
 	}
