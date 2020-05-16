@@ -1,7 +1,6 @@
 package routes
 
 import (
-	"github.com/didi/nightingale/src/modules/monapi/http/middleware"
 	"github.com/gin-gonic/gin"
 )
 
