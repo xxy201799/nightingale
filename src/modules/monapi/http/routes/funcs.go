@@ -146,21 +146,11 @@ func cookieUsername(c *gin.Context) string {
 }
 
 func loginUsername(c *gin.Context) string {
-	username, has := "root", nil
-	if !has {
-		return ""
-	}
-
-	if username == nil {
-		return ""
-	}
-
-	return username.(string)
+	return "root"
 }
 
 func loginUser(c *gin.Context) *model.User {
 	username := loginUsername(c)
-
 	user, err := model.UserGet("username", username)
 	errors.Dangerous(err)
 
