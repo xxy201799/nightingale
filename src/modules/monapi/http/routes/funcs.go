@@ -146,7 +146,7 @@ func cookieUsername(c *gin.Context) string {
 }
 
 func loginUsername(c *gin.Context) string {
-	username, has := "root"
+	username, has := "root", nil
 	if !has {
 		return ""
 	}
