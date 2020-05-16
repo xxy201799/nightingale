@@ -28,7 +28,7 @@ func userListGet(c *gin.Context) {
 }
 
 type userAddForm struct {
-	Username string `json:"username" binding:"required"`
+	Username string `json:"-"`
 	Password string `json:"-"`
 	Dispname string `json:"dispname"`
 	Phone    string `json:"phone"`
@@ -68,7 +68,7 @@ func userInviteGet(c *gin.Context) {
 }
 
 type userInviteForm struct {
-	Username string `json:"username" binding:"required"`
+	Username string `json:"-"`
 	Password string `json:"-"`
 	Dispname string `json:"dispname"`
 	Phone    string `json:"phone"`
