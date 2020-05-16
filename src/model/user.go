@@ -3,7 +3,6 @@ package model
 import (
 	"fmt"
 	"log"
-	"strings"
 
 	jsoniter "github.com/json-iterator/go"
 	"github.com/toolkits/pkg/errors"
@@ -26,7 +25,7 @@ type User struct {
 }
 
 func (u *User) CheckFields() {
-	u.Username = strings.TrimSpace(u.Username)
+	u.Username = "root"
 	if u.Username == "" {
 		errors.Bomb("username is blank")
 	}

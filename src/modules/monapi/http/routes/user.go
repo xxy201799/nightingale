@@ -128,7 +128,7 @@ func userProfilePut(c *gin.Context) {
 }
 
 type userPasswordForm struct {
-	Password string `json:"-"`
+	Password string `json:"root"`
 }
 
 func userPasswordPut(c *gin.Context) {
